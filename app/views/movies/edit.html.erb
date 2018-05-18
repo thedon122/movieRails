@@ -1,0 +1,13 @@
+<h1>Editing Movie</h1>
+
+<%= form_for :movie do |f| %>
+    Title: <%= f.text_field :title %><br />
+    Genre: <%= f.text_field :genre %><br />
+    Year: <%= f.text_field :release_year %><br />
+    Synopis: <%= f.text_area :synopis %><br />
+    Admin?    : <%= f.check_box :admin %><br />
+    <%= f.submit %>
+<% end %>
+
+<%= link_to 'Show', @movie %> |
+<%= link_to 'Back', movies_path %>
